@@ -11,8 +11,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 import { useState, useEffect } from "react"
-import AdminNavbarLinks from "components/navbar/NavbarLinksAdmin"
-import { isWindowAvailable } from "utils/navigation"
+import AdminNavbarLinks from "../../components/navbar/NavbarLinksAdmin"
+import { isWindowAvailable } from "../../utils/navigation"
 
 export default function AdminNavbar(props: {
   secondary: boolean

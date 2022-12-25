@@ -1,8 +1,8 @@
-import { ApexOptions } from 'apexcharts'
-import dynamic from 'next/dist/shared/lib/dynamic'
-import React from 'react'
-import { isWindowAvailable } from 'utils/navigation'
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
+import { ApexOptions } from "apexcharts"
+import dynamic from "next/dist/shared/lib/dynamic"
+import React from "react"
+import { isWindowAvailable } from "../../utils/navigation"
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false })
 
 export type ChartState = {
   chartData: ApexAxisChartSeries | ApexNonAxisChartSeries
@@ -16,29 +16,29 @@ export type ChartProps = ChartState & {
 class LineChart extends React.Component<ChartProps, ChartState> {
   state: ChartState = {
     chartData: [],
-    chartOptions: {}
+    chartOptions: {},
   }
 
-  constructor (props: ChartProps) {
+  constructor(props: ChartProps) {
     super(props)
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.setState({
       chartData: this.props.chartData,
-      chartOptions: this.props.chartOptions
+      chartOptions: this.props.chartOptions,
     })
   }
 
-  render () {
+  render() {
     if (!isWindowAvailable()) return <></>
     return (
       <Chart
         options={this.state.chartOptions}
         series={this.state.chartData}
-        type='area'
-        width='100%'
-        height='100%'
+        type="area"
+        width="100%"
+        height="100%"
       />
     )
   }

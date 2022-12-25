@@ -1,10 +1,10 @@
 // chakra imports
 import { Box, Flex, Stack } from "@chakra-ui/react"
 //   Custom components
-import Brand from "components/sidebar/components/Brand"
-import Links from "components/sidebar/components/Links"
-import SidebarCard from "components/sidebar/components/SidebarCard"
-import { IRoute } from "types/navigation"
+import Brand from "../../../components/sidebar/components/Brand"
+import Links from "../../../components/sidebar/components/Links"
+import SidebarCard from "../../../components/sidebar/components/SidebarCard"
+import { IRoute } from "../../../types/navigation"
 
 // FUNCTIONS
 
