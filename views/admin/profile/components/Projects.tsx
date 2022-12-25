@@ -47,6 +47,7 @@ export default function Projects(props: { links: any; [x: string]: any }) {
           <Project
             boxShadow={cardShadow}
             mb="20px"
+            //@ts-ignore
             image={Project1}
             ranking="1"
             link="#"
