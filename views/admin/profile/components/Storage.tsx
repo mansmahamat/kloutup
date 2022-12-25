@@ -8,9 +8,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 // Custom components
-import Card from "components/card/Card"
-import IconBox from "components/icons/IconBox"
-import Menu from "components/menu/MainMenu"
+import Card from "../../components/card/Card"
+import IconBox from "../../components/icons/IconBox"
+import Menu from "../../components/menu/MainMenu"
 import React from "react"
 import { FaLink, FaPlus } from "react-icons/fa"
 // Assets

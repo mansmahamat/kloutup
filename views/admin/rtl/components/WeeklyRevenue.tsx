@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react"
 import Card from "../../components/card/Card"
 // Custom components
-import BarChart from "components/charts/BarChart"
+import BarChart from "../../components/charts/BarChart"
 import {
   barChartDataConsumption,
   barChartOptionsConsumption,

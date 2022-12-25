@@ -19,10 +19,10 @@ import {
 } from "react-table"
 
 // Custom components
-import Card from "components/card/Card"
-import Menu from "components/menu/MainMenu"
-import { TableProps } from "views/admin/default/variables/columnsData"
-import { isWindowAvailable } from "utils/navigation"
+import Card from "../../../../components/card/Card"
+import Menu from "../../../../components/menu/MainMenu"
+import { TableProps } from "../../../../views/admin/default/variables/columnsData"
+import { isWindowAvailable } from "../../../../utils/navigation"
 export default function CheckTable(props: TableProps) {
   const { columnsData, tableData } = props
 

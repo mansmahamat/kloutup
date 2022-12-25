@@ -5,7 +5,7 @@ import { Box, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react"
 import Card from "../../components/card/Card"
 // Assets
 import { FaEthereum } from "react-icons/fa"
-import { Image } from "components/image/Image"
+import { Image } from "../../components/image/Image"
 
 export default function NFT(props: {
   image: string

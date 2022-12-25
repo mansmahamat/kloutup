@@ -3,7 +3,7 @@ import { Box, Flex, Select, Text, useColorModeValue } from "@chakra-ui/react"
 import { ApexOptions } from "apexcharts"
 import Card from "../../components/card/Card"
 // Custom components
-import BarChart from "components/charts/BarChart"
+import BarChart from "../../components/charts/BarChart"
 import {
   barChartDataUserActivity,
   barChartOptionsUserActivity,
