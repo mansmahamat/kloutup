@@ -326,6 +326,8 @@ export default function Home() {
               />
 
               <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize  group-hover:text-white">
+                {/* @ts-ignore */}
+
                 {userInfos?.username}
               </h1>
 

@@ -56,6 +56,8 @@ function TiktokProfileCard(props: { url: string; username: string }) {
         <Button
           w="38px"
           h="38px"
+          //@ts-ignore
+
           align="left"
           justify=""
           borderRadius="12px"

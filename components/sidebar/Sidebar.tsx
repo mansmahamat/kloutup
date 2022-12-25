@@ -87,6 +87,8 @@ export function SidebarResponsive(props: SidebarResponsiveProps) {
 
   return (
     <Flex display={{ sm: "flex", xl: "none" }} alignItems="center">
+      {/* @ts-ignore */}
+
       <Flex ref={btnRef} w="max-content" h="max-content" onClick={onOpen}>
         <Icon
           as={IoMenuOutline}
@@ -106,6 +108,8 @@ export function SidebarResponsive(props: SidebarResponsiveProps) {
             ? "right"
             : "left"
         }
+        //@ts-ignore
+
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />

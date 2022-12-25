@@ -69,6 +69,8 @@ export default function ProfileOverview({ user, links }: any) {
             <Button onClick={() => signOut()}>Loug out</Button>
             <Banner
               gridArea="1 / 1 / 2 / 2"
+              //@ts-ignore
+
               banner={banner}
               avatar={
                 profilePictureUrl

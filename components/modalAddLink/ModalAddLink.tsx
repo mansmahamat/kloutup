@@ -76,6 +76,7 @@ export default function ModalAddLink({ open, setOpen }: any) {
   ) => {
     //@ts-ignore
     setSocials(value.value)
+    //@ts-ignore
     setSelectedCountry(value)
   }
 
@@ -94,7 +95,13 @@ export default function ModalAddLink({ open, setOpen }: any) {
 
   const SingleValue = ({ children, ...props }: any) => (
     <components.SingleValue {...props}>
-      <img src={selectedCountry.icon.src} alt="s-logo" className=" mr-2 h-5" />
+      <img
+        //@ts-ignore
+
+        src={selectedCountry?.icon?.src}
+        alt="s-logo"
+        className=" mr-2 h-5"
+      />
       {children}
     </components.SingleValue>
   )
@@ -186,6 +193,8 @@ export default function ModalAddLink({ open, setOpen }: any) {
                           <Select
                             value={selectedCountry}
                             options={socialsLinkArray}
+                            //@ts-ignore
+
                             onChange={handleChange}
                             styles={{
                               singleValue: (base) => ({
@@ -206,6 +215,8 @@ export default function ModalAddLink({ open, setOpen }: any) {
                               Type
                             </div>
                             <Select
+                              //@ts-ignore
+
                               onChange={handleChangeTypeTwitter}
                               options={optionsTypeTwitter}
                             />
