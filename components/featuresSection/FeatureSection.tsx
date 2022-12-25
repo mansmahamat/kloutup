@@ -97,7 +97,7 @@ export default function FeatureSection() {
         <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div className="relative">
             <h3 className="text-2xl font-merriweather font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-              Share your KloutUp everywhere!
+              One username for all social media.
             </h3>
             <p className="mt-3 text-lg text-gray-500">
               KloutUp is a single link that you can use to reveal everything
@@ -227,12 +227,12 @@ export default function FeatureSection() {
           <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="lg:col-start-2">
               <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-                Always your presence
+                Simplify your online presence
               </h3>
               <p className="mt-3 text-lg text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                ex obcaecati natus eligendi delectus, cum deleniti sunt in
-                labore nihil quod quibusdam expedita nemo.
+                Websites are slow, hard to update and maintain. KloutUp is easy
+                for anyone to use. No code, no developers. Just link, share and
+                grow!.
               </p>
 
               <dl className="mt-10 space-y-10">
