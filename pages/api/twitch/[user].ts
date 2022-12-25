@@ -4,7 +4,10 @@ const clientSecret = process.env.NEXT_PUBLIC_TWITCH_CLIENT_SECRET
 const clientId = process.env.NEXT_PUBLIC_TWITCH_CLIENT_ID
 
 const twitch = new TwitchApi({
+  //@ts-ignore
   client_id: clientId,
+  //@ts-ignore
+
   client_secret: clientSecret,
 })
 
