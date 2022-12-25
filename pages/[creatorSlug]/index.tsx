@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+//@ts-ignore
 import ImageUploading, { ImageListType } from "react-images-uploading"
 import Image from "next/image"
 import { useRouter } from "next/router"

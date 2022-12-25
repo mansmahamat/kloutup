@@ -15,6 +15,8 @@ import banner from "../../../assets/img/auth/banner.png"
 import avatar from "../../../assets/img/avatars/avatar4.png"
 
 import { useEffect, useRef, useState } from "react"
+//@ts-ignore
+
 import ImageUploading, { ImageListType } from "react-images-uploading"
 import Image from "next/image"
 import { useRouter, Router } from "next/router"
