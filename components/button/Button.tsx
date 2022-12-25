@@ -33,7 +33,11 @@ export function Button({
   return (
     <button
       className={clsx(
+        //@ts-ignore
+
         baseStyles[variant],
+        //@ts-ignore
+
         variantStyles[variant][color],
         className
       )}
@@ -53,7 +57,10 @@ export function ButtonLink({
     <Link legacyBehavior href={href}>
       <a
         className={clsx(
+          //@ts-ignore
           baseStyles[variant],
+          //@ts-ignore
+
           variantStyles[variant][color],
           className
         )}
