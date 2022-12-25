@@ -23,9 +23,9 @@ import {
 } from "react-table"
 
 // Custom components
-import Card from "../../components/card/Card"
-import Menu from "../../components/menu/MainMenu"
-import {} from "../../components/charts/LineAreaChart"
+import Card from "../../../../components/card/Card"
+import Menu from "../../../../components/menu/MainMenu"
+import {} from "../../../../components/charts/LineAreaChart"
 import { TableProps } from "../variables/columnsData"
 
 export default function CheckTable(props: TableProps) {

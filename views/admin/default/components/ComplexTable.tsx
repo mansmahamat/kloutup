@@ -20,8 +20,8 @@ import {
 } from "react-table"
 
 // Custom components
-import Card from "../../components/card/Card"
-import Menu from "../../components/menu/MainMenu"
+import Card from "../../../../components/card/Card"
+import Menu from "../../../../components/menu/MainMenu"
 
 // Assets
 import { MdCheckCircle, MdCancel, MdOutlineError } from "react-icons/md"
@@ -116,6 +116,7 @@ export default function ColumnsTable(props: TableProps) {
                           w="24px"
                           h="24px"
                           me="5px"
+                          //@ts-ignore
                           color={
                             cell.value === "Approved"
                               ? "green.500"
@@ -125,6 +126,7 @@ export default function ColumnsTable(props: TableProps) {
                               ? "orange.500"
                               : null
                           }
+                          //@ts-ignore
                           as={
                             cell.value === "Approved"
                               ? MdCheckCircle

@@ -179,6 +179,7 @@ export default function DevelopmentTable(props: TableProps) {
               },
               index: React.Key | null | undefined
             ) => {
+              //@ts-ignore
               prepareRow(row)
               return (
                 <Tr {...row.getRowProps()} key={index}>
