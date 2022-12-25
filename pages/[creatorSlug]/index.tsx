@@ -665,3 +665,16 @@ export default function Home() {
     </div>
   )
 }
+
+export const getServerSideProps = async ({ req, params }: any) => {
+  return {
+    redirect: {
+      destination: "/",
+      permanent: false,
+    },
+  }
+
+  return {
+    props: {},
+  }
+}

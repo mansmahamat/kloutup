@@ -134,3 +134,16 @@ export default function Login() {
     </>
   )
 }
+
+export const getServerSideProps = async ({ req, params }: any) => {
+  return {
+    redirect: {
+      destination: "/",
+      permanent: false,
+    },
+  }
+
+  return {
+    props: {},
+  }
+}

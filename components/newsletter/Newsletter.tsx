@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react"
 import ConfettiExplosion from "react-confetti-explosion"
+import Confetti from "react-dom-confetti"
 
 function Newsletter() {
   const inputEl = useRef(null)
@@ -7,6 +8,20 @@ function Newsletter() {
   const [message, setMessage] = useState("")
   const [subscribed, setSubscribed] = useState(false)
   const [isExploding, setIsExploding] = useState(false)
+
+  const config = {
+    angle: 90,
+    spread: 360,
+    startVelocity: 40,
+    elementCount: 70,
+    dragFriction: 0.12,
+    duration: 3000,
+    stagger: 3,
+    width: "10px",
+    height: "10px",
+    perspective: "500px",
+    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+  }
 
   const subscribe = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
@@ -28,11 +43,13 @@ function Newsletter() {
       setMessage(error)
       return
     }
+
     //@ts-ignore
     inputEl.current.value = ""
     setError(false)
     setSubscribed(true)
     setIsExploding(true)
+
     setMessage("Successfully! 🎉 You are now subscribed.")
   }
 
@@ -72,8 +89,9 @@ function Newsletter() {
             disabled={subscribed}
             className="w-full px-5 py-3 border border-purple-gray-300 shadow-sm placeholder-purple-gray-400 focus:ring-1 focus:ring-purple-500 focus:border-purple-500 sm:max-w-xs rounded-md"
           />
-          {isExploding && <ConfettiExplosion />}
+
           <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+            {isExploding && <Confetti active={isExploding} config={config} />}
             <button
               className={`w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 ${
                 subscribed

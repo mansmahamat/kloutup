@@ -108,6 +108,7 @@ export const getServerSideProps = async ({ req, params }: any) => {
   const userTwitterInfos = await response.json()
 
   console.log(userTwitterInfos)
+
   return {
     props: {},
   }
