@@ -35,11 +35,11 @@ import {
 } from "@chakra-ui/react"
 
 // Custom components
-import Banner from "views/admin/marketplace/components/Banner"
-import TableTopCreators from "views/admin/marketplace/components/TableTopCreators"
-import HistoryItem from "views/admin/marketplace/components/HistoryItem"
-import NFT from "components/card/NFT"
-import Card from "components/card/Card"
+import Banner from "../../views/admin/marketplace/components/Banner"
+import TableTopCreators from "../../views/admin/marketplace/components/TableTopCreators"
+import HistoryItem from "../../views/admin/marketplace/components/HistoryItem"
+import NFT from "../../components/card/NFT"
+import Card from "../../components/card/Card"
 
 // Assets
 import Nft1 from "../../assets/img/nfts/Nft1.png"
@@ -52,10 +52,10 @@ import Avatar1 from "../../assets/img/avatars/avatar1.png"
 import Avatar2 from "../../assets/img/avatars/avatar2.png"
 import Avatar3 from "../../assets/img/avatars/avatar3.png"
 import Avatar4 from "../../assets/img/avatars/avatar4.png"
-import tableDataTopCreators from "views/admin/marketplace/variables/tableDataTopCreators.json"
-import { tableColumnsTopCreators } from "views/admin/marketplace/variables/tableColumnsTopCreators"
-import AdminLayout from "layouts/admin"
-import { TableData } from "views/admin/default/variables/columnsData"
+import tableDataTopCreators from "../../views/admin/marketplace/variables/tableDataTopCreators.json"
+import { tableColumnsTopCreators } from "../../views/admin/marketplace/variables/tableColumnsTopCreators"
+import AdminLayout from "../../layouts/admin"
+import { TableData } from "../../views/admin/default/variables/columnsData"
 import NextLink from "next/link"
 
 export default function NftMarketplace() {
@@ -137,16 +137,11 @@ export default function NftMarketplace() {
                 <NFT
                   name="Abstract Colors"
                   author="By Esthera Jackson"
-                  bidders={[
-                    Avatar1,
-                    Avatar2,
-                    Avatar3,
-                    Avatar4,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                  ]}
+                  //@ts-ignore
+
+                  bidders={[Avatar1, Avatar2, Avatar3, Avatar4]}
+                  //@ts-ignore
+
                   image={Nft1}
                   currentbid="0.91 ETH"
                   download="#"
@@ -154,16 +149,10 @@ export default function NftMarketplace() {
                 <NFT
                   name="ETH AI Brain"
                   author="By Nick Wilson"
-                  bidders={[
-                    Avatar1,
-                    Avatar2,
-                    Avatar3,
-                    Avatar4,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                  ]}
+                  //@ts-ignore
+                  bidders={[Avatar1, Avatar2, Avatar3, Avatar4]}
+                  //@ts-ignore
+
                   image={Nft2}
                   currentbid="0.91 ETH"
                   download="#"
@@ -171,16 +160,11 @@ export default function NftMarketplace() {
                 <NFT
                   name="Mesh Gradients "
                   author="By Will Smith"
-                  bidders={[
-                    Avatar1,
-                    Avatar2,
-                    Avatar3,
-                    Avatar4,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                  ]}
+                  //@ts-ignore
+
+                  bidders={[Avatar1, Avatar2, Avatar3, Avatar4]}
+                  //@ts-ignore
+
                   image={Nft3}
                   currentbid="0.91 ETH"
                   download="#"
@@ -204,16 +188,11 @@ export default function NftMarketplace() {
                 <NFT
                   name="Swipe Circles"
                   author="By Peter Will"
-                  bidders={[
-                    Avatar1,
-                    Avatar2,
-                    Avatar3,
-                    Avatar4,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                  ]}
+                  //@ts-ignore
+
+                  bidders={[Avatar1, Avatar2, Avatar3, Avatar4]}
+                  //@ts-ignore
+
                   image={Nft4}
                   currentbid="0.91 ETH"
                   download="#"
@@ -221,16 +200,11 @@ export default function NftMarketplace() {
                 <NFT
                   name="Colorful Heaven"
                   author="By Mark Benjamin"
-                  bidders={[
-                    Avatar1,
-                    Avatar2,
-                    Avatar3,
-                    Avatar4,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                  ]}
+                  //@ts-ignore
+
+                  bidders={[Avatar1, Avatar2, Avatar3, Avatar4]}
+                  //@ts-ignore
+
                   image={Nft5}
                   currentbid="0.91 ETH"
                   download="#"
@@ -238,16 +212,11 @@ export default function NftMarketplace() {
                 <NFT
                   name="3D Cubes Art"
                   author="By Manny Gates"
-                  bidders={[
-                    Avatar1,
-                    Avatar2,
-                    Avatar3,
-                    Avatar4,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                    Avatar1,
-                  ]}
+                  //@ts-ignore
+
+                  bidders={[Avatar1, Avatar2, Avatar3, Avatar4]}
+                  //@ts-ignore
+
                   image={Nft6}
                   currentbid="0.91 ETH"
                   download="#"
@@ -283,6 +252,8 @@ export default function NftMarketplace() {
                 name="Colorful Heaven"
                 author="By Mark Benjamin"
                 date="30s ago"
+                //@ts-ignore
+
                 image={Nft5}
                 price="0.91 ETH"
               />
@@ -290,6 +261,8 @@ export default function NftMarketplace() {
                 name="Abstract Colors"
                 author="By Esthera Jackson"
                 date="58s ago"
+                //@ts-ignore
+
                 image={Nft1}
                 price="0.91 ETH"
               />
@@ -297,6 +270,8 @@ export default function NftMarketplace() {
                 name="ETH AI Brain"
                 author="By Nick Wilson"
                 date="1m ago"
+                //@ts-ignore
+
                 image={Nft2}
                 price="0.91 ETH"
               />
@@ -304,6 +279,8 @@ export default function NftMarketplace() {
                 name="Swipe Circles"
                 author="By Peter Will"
                 date="1m ago"
+                //@ts-ignore
+
                 image={Nft4}
                 price="0.91 ETH"
               />
@@ -311,6 +288,8 @@ export default function NftMarketplace() {
                 name="Mesh Gradients "
                 author="By Will Smith"
                 date="2m ago"
+                //@ts-ignore
+
                 image={Nft3}
                 price="0.91 ETH"
               />
@@ -318,6 +297,8 @@ export default function NftMarketplace() {
                 name="3D Cubes Art"
                 author="By Manny Gates"
                 date="3m ago"
+                //@ts-ignore
+
                 image={Nft6}
                 price="0.91 ETH"
               />
