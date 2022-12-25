@@ -19,7 +19,7 @@ import {
 } from 'react-table'
 
 // Custom components
-import Card from 'components/card/Card'
+import Card from '../../components/card/Card''
 import Menu from 'components/menu/MainMenu'
 import { TableProps } from 'views/admin/default/variables/columnsData'
 export default function CheckTable (props: TableProps) {

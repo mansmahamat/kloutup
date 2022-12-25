@@ -12,7 +12,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 // Custom components
-import Card from 'components/card/Card'
+import Card from '../../components/card/Card''
 import { AndroidLogo, AppleLogo, WindowsLogo } from 'components/icons/Icons'
 import Menu from 'components/menu/MainMenu'
 import React, { useEffect, useMemo, useState } from 'react'

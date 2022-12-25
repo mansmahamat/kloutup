@@ -13,7 +13,7 @@ import {
 	AspectRatio
 } from '@chakra-ui/react';
 // Custom components
-import Card from 'components/card/Card';
+import Card from '../../components/card/Card'';
 import { NextAvatar } from 'components/image/Avatar';
 import { Image } from 'components/image/Image';
 // Assets

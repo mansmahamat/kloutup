@@ -1,7 +1,7 @@
 // Chakra imports
 import { Box, Button, Flex, Icon, Text, useColorModeValue } from '@chakra-ui/react';
 // Custom components
-import Card from 'components/card/Card';
+import Card from '../../components/card/Card'';
 import LineChart from 'components/charts/LineChart';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';

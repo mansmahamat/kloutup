@@ -20,7 +20,7 @@ import {
 } from 'react-table'
 
 // Custom components
-import Card from 'components/card/Card'
+import Card from '../../components/card/Card''
 import Menu from 'components/menu/MainMenu'
 
 // Assets
