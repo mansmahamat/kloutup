@@ -30,7 +30,7 @@ function ScreenMac({ isOpen, setIsOpen }: Props) {
                     </div>
                     <div className="rounded-full h-4 w-4 bg-green-400 flex mr-3"></div>
                     <div className="flex-auto px-2 py-1 ml-5 mr-1 rounded-md bg-white text-xs">
-                      https://www.kloutup.co
+                      https://www.kloutup.co/mans_js
                     </div>
                   </div>
                   <div className=" mt-4 lg:flex lg:justify-start    min-h-full  lg:items-center justify-between">

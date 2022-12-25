@@ -5,33 +5,42 @@ import { CheckIcon } from "@heroicons/react/24/solid"
 const tiers = [
   {
     name: "Free",
-    href: "#",
+    href: "/#joinlist",
     priceMonthly: 0,
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description:
+      "You just want to make it simple, sharing your links without pain",
     features: [
-      "Pariatur quod similique",
-      "Sapiente libero doloribus modi nostrum",
-      "Vel ipsa esse repudiandae excepturi",
-      "Itaque cupiditate adipisci quibusdam",
+      "Unlimited links",
+      "Embed Twitter, Tiktok, Youtube & Twitch content",
+      "Free themes",
+      "Social icons",
+      "Custom Profile Picture & Title + Bio Description",
     ],
+    mostPopular: false,
   },
   {
     name: "Pro",
-    href: "#",
+    href: "/#joinlist",
     priceMonthly: 6,
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description:
+      "Take it to the next level. Build your audience and analyse the sharing of your link. The world is yours",
     features: [
-      "Pariatur quod similique",
-      "Sapiente libero doloribus modi nostrum",
-      "Vel ipsa esse repudiandae excepturi",
-      "Itaque cupiditate adipisci quibusdam",
+      "Unlimited links",
+      "Embed Twitter, Tiktok, Youtube & Twitch content",
+      "Free themes",
+      "Social icons",
+      "Custom Profile Picture & Title + Bio Description",
+      "Location, visitors, visitors duration analytics",
+      "Hide KloutUp logo, let your brand shine",
+      "Custom color themes",
     ],
+    mostPopular: true,
   },
 ]
 
 export default function Pricing() {
   return (
-    <div className="">
+    <div id="pricing" className="">
       <div className="pt-12 sm:pt-16 lg:pt-24">
         <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto space-y-2 lg:max-w-none">
@@ -39,24 +48,25 @@ export default function Pricing() {
               Pricing
             </h2>
             <p className="text-3xl font-merriweather font-extrabold text-slate-900 sm:text-4xl lg:text-5xl">
-              The right price for you, whoever you are
+              The perfect plan for you
             </p>
-            <p className="text-xlfont-merriweather  text-slate-700">
+            {/* <p className="text-xlfont-merriweather  text-slate-700">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum
               sequi unde repudiandae natus.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
       <div className="mt-8 pb-12 bg-gray-50 sm:mt-12 sm:pb-16 lg:mt-16 lg:pb-24">
         <div className="relative">
-          <div className="absolute inset-0 h-3/4 bg-purple-300" />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-md mx-auto space-y-4 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
               {tiers.map((tier) => (
                 <div
                   key={tier.name}
-                  className="flex flex-col rounded-lg shadow-lg overflow-hidden"
+                  className={
+                    "flex border border-purple-600 flex-col rounded-lg shadow-lg overflow-hidden"
+                  }
                 >
                   <div className="px-6 py-8 bg-white sm:p-10 sm:pb-6">
                     <div>
@@ -66,11 +76,19 @@ export default function Pricing() {
                       >
                         {tier.name}
                       </h3>
+                      {tier.mostPopular && (
+                        <h3
+                          className="inline-flex mx-4 px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-purple-600 text-purple-100"
+                          id="tier-standard"
+                        >
+                          Most Popular
+                        </h3>
+                      )}
                     </div>
                     <div className="mt-4 flex items-baseline text-6xl font-extrabold">
                       ${tier.priceMonthly}
                       <span className="ml-1 text-2xl font-medium text-gray-500">
-                        /mo
+                        /month
                       </span>
                     </div>
                     <p className="mt-5 text-lg text-gray-500">

@@ -405,20 +405,20 @@ export default function Home() {
                 <path
                   d="M1.33325 4H10.6666"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M8 6.66667L10.6667 4"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M8 1.33398L10.6667 4.00065"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>
@@ -586,8 +586,8 @@ export default function Home() {
                     fill="none"
                     stroke="#000000"
                     stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path d="M5 12h13M12 5l7 7-7 7" />
                   </svg>

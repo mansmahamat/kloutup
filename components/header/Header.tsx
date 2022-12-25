@@ -66,13 +66,7 @@ function MobileNavigation() {
                     </a>
                   </Link>
                 </li>
-                <li>
-                  <Link legacyBehavior href="#testimonials">
-                    <a className="block w-full" onClick={() => close()}>
-                      Testimonials
-                    </a>
-                  </Link>
-                </li>
+
                 <li>
                   <Link legacyBehavior href="#pricing">
                     <a className="block w-full" onClick={() => close()}>
@@ -80,11 +74,18 @@ function MobileNavigation() {
                     </a>
                   </Link>
                 </li>
-                <li className="border-t border-slate-300/40 pt-4">
+                <li>
+                  <Link legacyBehavior href="#joinlist">
+                    <a className="block w-full" onClick={() => close()}>
+                      Join list
+                    </a>
+                  </Link>
+                </li>
+                {/* <li className="border-t border-slate-300/40 pt-4">
                   <Link legacyBehavior href="/login">
                     <a className="block w-full">Sign in</a>
                   </Link>
-                </li>
+                </li> */}
               </Popover.Panel>
             </Transition.Child>
           </Transition.Root>
@@ -113,13 +114,7 @@ export function Header() {
                 </a>
               </Link>
             </li>
-            <li className="ml-6 hidden md:block">
-              <Link legacyBehavior href="#testimonials">
-                <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Testimonials
-                </a>
-              </Link>
-            </li>
+
             <li className="ml-6 hidden md:block">
               <Link legacyBehavior href="#pricing">
                 <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
@@ -127,20 +122,27 @@ export function Header() {
                 </a>
               </Link>
             </li>
-            <li className="ml-auto hidden md:block">
+            <li className="ml-6 hidden md:block">
+              <Link legacyBehavior href="#joinlist">
+                <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+                  Join list
+                </a>
+              </Link>
+            </li>
+            {/* <li className="ml-auto hidden md:block">
               <Link legacyBehavior href="/login">
                 <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
                   Sign in
                 </a>
               </Link>
-            </li>
-            <li className="ml-auto md:ml-8">
-              <ButtonLink href="/register" color="blue">
+            </li> */}
+            {/* <li className="ml-auto md:ml-8">
+              <ButtonLink href="#joinlist" color="blue">
                 <span>
                   Get started<span className="hidden lg:inline"> today</span>
                 </span>
               </ButtonLink>
-            </li>
+            </li> */}
             <li className="ml-5 -mr-1 md:hidden">
               <MobileNavigation />
             </li>

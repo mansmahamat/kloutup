@@ -48,7 +48,10 @@ const communicationFeatures = [
 
 export default function FeatureSection() {
   return (
-    <div className="py-16 bg-gray-50 overflow-hidden font-inter lg:py-24">
+    <div
+      id="features"
+      className="py-16 bg-gray-50 overflow-hidden font-inter lg:py-24"
+    >
       <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <svg
           className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
@@ -299,7 +302,7 @@ export default function FeatureSection() {
               <img
                 className="relative mx-auto"
                 width={490}
-                src="images/Widget(5).png"
+                src="images/Search.png"
                 alt=""
               />
             </div>

@@ -1,6 +1,7 @@
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
+import FeatureSectionAnalytics from "../components/featureSectionAnalytics/FeatureSectionAnalytics"
 import FeatureSection from "../components/featuresSection/FeatureSection"
 import FooterLandingPage from "../components/footerLandingPage/FooterLandingPage"
 import { Header } from "../components/header/Header"
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
       <main>
         <Hero />
         <FeatureSection />
+        <FeatureSectionAnalytics />
         <Pricing />
         <Newsletter />
         <FooterLandingPage />

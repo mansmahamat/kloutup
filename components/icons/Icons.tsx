@@ -255,8 +255,8 @@ export const GlobeIcon = createIcon({
         fill="transparent"
         d="M5.156 5.156C6.836 6.349 8.952 7.06 11.25 7.06c2.298 0 4.414-.711 6.094-1.904M17.344 17.344c-1.68-1.193-3.796-1.904-6.094-1.904-2.298 0-4.413.711-6.094 1.904"
         stroke-width=".75"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         stroke="currentColor"
@@ -582,8 +582,8 @@ export const DashCurveUp = createIcon({
         d="M1 21v0C41.269-4.626 92.731-4.626 133 21v0"
         stroke="currentColor"
         stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         stroke-dasharray="6 6"
       />
     </g>
@@ -598,8 +598,8 @@ export const DashCurveDown = createIcon({
         d="M1 1v0c40.269 25.626 91.731 25.626 132 0v0"
         stroke="currentColor"
         stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         stroke-dasharray="6 6"
       />
     </g>

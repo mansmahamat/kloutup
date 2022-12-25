@@ -12,7 +12,7 @@ import { useState } from "react"
 export function Hero() {
   const [isOpen, setIsOpen] = useState(true)
   return (
-    <Container className="pt-20 pb-16 text-center lg:pt-32">
+    <Container id="hero" className="pt-20 pb-16 text-center lg:pt-32">
       <h1 className="mx-auto  max-w-4xl   font-merriweather  text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         All your socials presence in one link.
       </h1>
@@ -25,17 +25,17 @@ export function Hero() {
             href="#"
             className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700"
           >
-            Get started
+            Join the wait list
           </a>
         </div>
-        <div className="ml-3 inline-flex rounded-md shadow">
+        {/* <div className="ml-3 inline-flex rounded-md shadow">
           <a
             href="#"
             className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50"
           >
             Learn more
           </a>
-        </div>
+        </div> */}
       </div>
       <div className="lg:flex hidden relative  rounded-md mx-auto w-full h-screen bg-wallpaper bg-cover overflow-hidden">
         <MenuBarMac />
