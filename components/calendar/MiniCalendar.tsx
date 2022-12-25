@@ -1,4 +1,5 @@
 import { useState } from "react"
+//@ts-ignore
 import Calendar from "react-calendar"
 import { Text, Icon } from "@chakra-ui/react"
 // Chakra imports
