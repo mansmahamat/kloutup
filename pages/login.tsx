@@ -22,7 +22,6 @@ export default function Login() {
           .from("users")
           .select("username, profile_picture_url")
 
-        console.log("userId: ", user?.data[0]?.username)
         //@ts-ignore
         router.push(`/admin/${user?.data[0]?.username}/profile`)
       }
