@@ -14,10 +14,10 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>TaxPal - Accounting made simple for small businesses</title>
+        <title>KloutUp - Your online presence in one link</title>
         <meta
           name="description"
-          content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited."
+          content="Your online presence in one link Share your link with the world."
         />
       </Head>
       <Header />

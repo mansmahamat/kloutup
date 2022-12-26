@@ -1,7 +1,8 @@
 import {
+  Box,
   Flex,
+  SimpleGrid,
   Table,
-  Checkbox,
   Tbody,
   Td,
   Text,
@@ -13,8 +14,6 @@ import {
 import { useMemo } from "react"
 import {
   ColumnInstance,
-  HeaderGroup,
-  Row,
   useGlobalFilter,
   usePagination,
   useSortBy,
@@ -26,14 +25,26 @@ import {
 import Card from "../../../../components/card/Card"
 import Menu from "../../../../components/menu/MainMenu"
 import { TableProps } from "../variables/columnsData"
-import ReactCountryFlag from "react-country-flag"
+import {
+  PieChart,
+  Pie,
+  Sector,
+  Cell,
+  ResponsiveContainer,
+  BarChart,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  Bar,
+} from "recharts"
 
-export default function CheckTable(props: TableProps) {
-  const { columnsData, tableData, dataTotalUniqueVisitorsCountry } = props
+export default function TopOS(props: TableProps) {
+  const { columnsData, tableData, topOS } = props
 
   const columns = useMemo(() => columnsData, [columnsData])
-  const data = dataTotalUniqueVisitorsCountry
-  const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" })
+  const data = topOS
 
   const tableInstance = useTable(
     {
@@ -57,6 +68,44 @@ export default function CheckTable(props: TableProps) {
 
   const textColor = useColorModeValue("secondaryGray.900", "white")
   const borderColor = useColorModeValue("gray.200", "whiteAlpha.100")
+
+  const dataM = [
+    { name: "Group A", value: 400 },
+    { name: "Group B", value: 300 },
+    { name: "Group C", value: 300 },
+    { name: "Group D", value: 200 },
+  ]
+
+  console.log("HELO", data)
+
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"]
+
+  const RADIAN = Math.PI / 180
+  const renderCustomizedLabel = ({
+    cx,
+    cy,
+    midAngle,
+    innerRadius,
+    outerRadius,
+    percent,
+    index,
+  }: any) => {
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5
+    const x = cx + radius * Math.cos(-midAngle * RADIAN)
+    const y = cy + radius * Math.sin(-midAngle * RADIAN)
+
+    return (
+      <text
+        x={x}
+        y={y}
+        fill="white"
+        textAnchor={x > cx ? "start" : "end"}
+        dominantBaseline="central"
+      >
+        {`${(percent * 100).toFixed(0)}%`}
+      </text>
+    )
+  }
   return (
     <Card
       flexDirection="column"
@@ -71,11 +120,11 @@ export default function CheckTable(props: TableProps) {
           fontWeight="700"
           lineHeight="100%"
         >
-          Top 10 countries
+          Top Devices
         </Text>
         <Menu />
       </Flex>
-      <Table {...getTableProps()} variant="simple" color="gray.500" mb="24px">
+      {/* <Table {...getTableProps()} variant="simple" color="gray.500" mb="24px">
         <Thead>
           {headerGroups.map((headerGroup, index: number) => (
             <Tr {...headerGroup.getHeaderGroupProps()} key={index}>
@@ -114,20 +163,8 @@ export default function CheckTable(props: TableProps) {
                   if (cell.column.Header === "Country") {
                     data = (
                       <Flex align="center">
-                        <ReactCountryFlag
-                          className="emojiFlag"
-                          countryCode={cell.row?.original?.country}
-                          style={{
-                            fontSize: "2em",
-                            lineHeight: "2em",
-                            marginRight: "2px",
-                          }}
-                          aria-label={regionNamesInEnglish.of(
-                            cell.row?.original?.country
-                          )}
-                        />
                         <Text color={textColor} fontSize="sm" fontWeight="700">
-                          {regionNamesInEnglish.of(cell.row?.original?.country)}
+                          {cell.row?.original?.os}
                         </Text>
                       </Flex>
                     )
@@ -173,7 +210,31 @@ export default function CheckTable(props: TableProps) {
             )
           })}
         </Tbody>
-      </Table>
+      </Table> */}
+      <SimpleGrid
+        columns={{ base: 1, md: 1, xl: 1 }}
+        width="100%"
+        height="100%"
+        minW={"100%"}
+        gap="20px"
+        mb="20px"
+      >
+        <Flex flex="" justify="center" align="center">
+          <BarChart
+            margin={{ top: 30, right: 30, left: 0, bottom: 0 }}
+            width={530}
+            height={250}
+            data={data}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="os" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="visitors" fill="#8884d8" />
+          </BarChart>
+        </Flex>
+      </SimpleGrid>
     </Card>
   )
 }

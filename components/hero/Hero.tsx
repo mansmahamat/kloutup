@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <Container id="hero" className="pt-20 pb-16 text-center lg:pt-32">
       <h1 className="mx-auto  max-w-4xl   font-merriweather  text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
-        All your socials presence in one link.
+        All your socials presence in one click.
       </h1>
       <p className="mx-auto mt-6 mb-8 font-merriweather max-w-2xl text-lg tracking-tight text-slate-700">
         Share vibes with the world.

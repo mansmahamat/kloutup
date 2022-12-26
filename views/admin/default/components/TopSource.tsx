@@ -1,7 +1,6 @@
 import {
   Flex,
   Table,
-  Checkbox,
   Tbody,
   Td,
   Text,
@@ -13,8 +12,6 @@ import {
 import { useMemo } from "react"
 import {
   ColumnInstance,
-  HeaderGroup,
-  Row,
   useGlobalFilter,
   usePagination,
   useSortBy,
@@ -26,14 +23,12 @@ import {
 import Card from "../../../../components/card/Card"
 import Menu from "../../../../components/menu/MainMenu"
 import { TableProps } from "../variables/columnsData"
-import ReactCountryFlag from "react-country-flag"
 
-export default function CheckTable(props: TableProps) {
-  const { columnsData, tableData, dataTotalUniqueVisitorsCountry } = props
+export default function TopSource(props: TableProps) {
+  const { columnsData, tableData, topSourcesData } = props
 
   const columns = useMemo(() => columnsData, [columnsData])
-  const data = dataTotalUniqueVisitorsCountry
-  const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" })
+  const data = topSourcesData
 
   const tableInstance = useTable(
     {
@@ -71,7 +66,7 @@ export default function CheckTable(props: TableProps) {
           fontWeight="700"
           lineHeight="100%"
         >
-          Top 10 countries
+          Top Sources
         </Text>
         <Menu />
       </Flex>
@@ -114,20 +109,8 @@ export default function CheckTable(props: TableProps) {
                   if (cell.column.Header === "Country") {
                     data = (
                       <Flex align="center">
-                        <ReactCountryFlag
-                          className="emojiFlag"
-                          countryCode={cell.row?.original?.country}
-                          style={{
-                            fontSize: "2em",
-                            lineHeight: "2em",
-                            marginRight: "2px",
-                          }}
-                          aria-label={regionNamesInEnglish.of(
-                            cell.row?.original?.country
-                          )}
-                        />
                         <Text color={textColor} fontSize="sm" fontWeight="700">
-                          {regionNamesInEnglish.of(cell.row?.original?.country)}
+                          {cell.row?.original?.source}
                         </Text>
                       </Flex>
                     )

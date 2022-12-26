@@ -5,43 +5,42 @@ import {
   ScaleIcon,
 } from "@heroicons/react/24/solid"
 import { FaMailchimp } from "react-icons/fa"
+import { IoLinkSharp, IoShareSocial } from "react-icons/io5"
+import { RiCustomerServiceFill } from "react-icons/ri"
 
 const transferFeatures = [
   {
     id: 1,
     name: "Unlimited links",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: GlobeAltIcon,
+    description: "Add as many links as you like",
+    icon: IoLinkSharp,
   },
   {
     id: 2,
-    name: "Custom bio link",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: ScaleIcon,
+    name: "Custom  link",
+    description: "Share your personal link, eg: kloutup/james.",
+    icon: RiCustomerServiceFill,
   },
   {
     id: 3,
     name: "Embed Twitch, Youtube, Tiktok, Twitter post",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: LightBulbIcon,
+      "Show the world who you are, embed for example your best Tiktok .",
+    icon: IoShareSocial,
   },
 ]
 const communicationFeatures = [
   {
     id: 1,
     name: "Custom background",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+    description: "Choose the theme you prefer.",
     icon: DocumentArrowDownIcon,
   },
   {
     id: 2,
     name: "Analytics on visit (28 days)",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Let's be aware of who visits your profile, how long and where they come from. Maybe you have a good audience in Peru without knowing it",
     icon: FaMailchimp,
   },
 ]

@@ -99,7 +99,7 @@ export const getServerSideProps = async ({ req, params }: any) => {
   }
 
   const response = await fetch(
-    "https://plausible.io/api/v1/stats/breakdown?site_id=mansour-mahamat.dev&period=30d&property=visit:country&metrics=visitors,pageviews,bounce_rate,visit_duration,visits,events",
+    "https://plausible.io/api/v1/stats/breakdown?site_id=mansour-mahamat.dev&period=30d&metrics=visitors,pageviews,bounce_rate,visit_duration,visits&property=visit:os",
     //@ts-ignore
 
     requestOptions
@@ -107,7 +107,7 @@ export const getServerSideProps = async ({ req, params }: any) => {
 
   const userTwitterInfos = await response.json()
 
-  console.log(userTwitterInfos)
+  console.log("MA?S", userTwitterInfos)
 
   return {
     props: {},

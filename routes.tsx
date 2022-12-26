@@ -5,6 +5,7 @@ import {
   MdHome,
   MdLock,
   MdOutlineShoppingCart,
+  MdAnalytics,
 } from "react-icons/md"
 
 // Admin Imports
@@ -18,9 +19,9 @@ import { IRoute } from "./types/navigation"
 
 const routes: IRoute[] = [
   {
-    name: "Main Dashboard",
+    name: "Home",
     layout: "/admin",
-    path: "/default",
+    path: "/profile",
     icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
     component: MainDashboard,
   },
@@ -47,10 +48,10 @@ const routes: IRoute[] = [
   //     component: DataTables,
   //   },
   {
-    name: "Profile",
+    name: "Analytics",
     layout: "/admin",
-    path: "/profile",
-    icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />,
+    path: "/default",
+    icon: <Icon as={MdAnalytics} width="20px" height="20px" color="inherit" />,
     component: Profile,
   },
 ]

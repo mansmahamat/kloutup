@@ -1,24 +1,24 @@
-import { Column } from "react-table";
-import tableDataCheck from "./tableDataCheck.json";
+import { Column } from "react-table"
+import tableDataCheck from "./tableDataCheck.json"
 
 export const columnsDataCheck = [
   {
-    Header: "NAME",
-    accessor: "name",
+    Header: "Country",
+    accessor: "Country",
   },
   {
-    Header: "PROGRESS",
-    accessor: "progress",
+    Header: "Visitors",
+    accessor: "Visitors",
   },
   {
-    Header: "QUANTITY",
-    accessor: "quantity",
+    Header: "Page views",
+    accessor: "Page views",
   },
-  {
-    Header: "DATE",
-    accessor: "date",
-  },
-];
+  // {
+  //   Header: "DATE",
+  //   accessor: "date",
+  // },
+]
 export const columnsDataComplex = [
   {
     Header: "NAME",
@@ -36,21 +36,24 @@ export const columnsDataComplex = [
     Header: "PROGRESS",
     accessor: "progress",
   },
-];
+]
 
-export type ColumnData = Column[];
+export type ColumnData = Column[]
 
 export type TableData = Column<{
-  name: (string | boolean)[];
-  date: string;
-  progress: number;
-  quantity?: number;
-  status?: string;
-  artworks?: string;
-  rating?: number;
-}>;
+  name: (string | boolean)[]
+  date: string
+  progress: number
+  quantity?: number
+  status?: string
+  artworks?: string
+  rating?: number
+}>
 
 export type TableProps = {
-  columnsData: ColumnData;
-  tableData: TableData[];
-};
+  columnsData: ColumnData
+  tableData: TableData[]
+  dataTotalUniqueVisitorsCountry?: any
+  topSourcesData?: any
+  topOS?: any
+}

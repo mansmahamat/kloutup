@@ -136,14 +136,12 @@ export default function Login() {
 }
 
 export const getServerSideProps = async ({ req, params }: any) => {
+  // const supabase = createServerSupabaseClient(ctx)
+
   return {
     redirect: {
       destination: "/",
       permanent: false,
     },
-  }
-
-  return {
-    props: {},
   }
 }

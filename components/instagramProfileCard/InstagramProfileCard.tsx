@@ -11,7 +11,7 @@ function InstagramProfileCard() {
   }
   return (
     <Draggable>
-      <div className=" bg-white  py-4 px-2  mt-4">
+      <div className=" bg-white rounded-lg  py-4 px-2  mt-4">
         <div className="flex  flex-col items-start w-full m-auto sm:flex-row">
           <div className="flex mx-auto sm:mr-10 sm:m-0">
             <div className="items-center justify-center w-16 h-16 m-auto mr-4 sm:w-32 sm:h-32">
