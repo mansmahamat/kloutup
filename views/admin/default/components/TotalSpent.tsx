@@ -32,7 +32,7 @@ import {
 } from "recharts"
 
 export default function TotalSpent(props: {
-  data30TotalUniqueVisitors: any
+  data30TotalUniqueVisitors?: any
   [x: string]: any
 }) {
   const { data30TotalUniqueVisitors, ...rest } = props
